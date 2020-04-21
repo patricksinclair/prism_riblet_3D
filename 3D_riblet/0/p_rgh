@@ -27,8 +27,9 @@ boundaryField
 
     rightWall
     {
-        type            fixedValue;
-        value           uniform 0;
+        // type            fixedValue;
+        // value           uniform 0;
+        type            zeroGradient;
     }
 
     lowerWall
@@ -40,6 +41,19 @@ boundaryField
     {
         type            zeroGradient;
     }
+
+    frontWall
+    {
+        type            zeroGradient;
+    }
+
+    backWall
+    {
+      type            fixedValue;
+      value           uniform 0;
+    }
+
+
 
     defaultFaces
     {

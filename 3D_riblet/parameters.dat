@@ -3,8 +3,11 @@
 u_max 0.18; //x_velocity at the top of the inlet linear gradient
 u_jet -1.0; //y_velocity at the top of the system. represents a jet of water being applied to the system.
 sigma 1e-3; //surface tension
-bf_thickness 60e-6; //biofilm thickness in metres
-bf_length 500e-6; //length of biofilm in metres
+bf_thickness 60e-6; //biofilm thickness in metres (height, y-direction)
+bf_width 165e-6; //width of biofilm in metres (x-direction)
+bf_length 200e-6; //length of biofilm in metres (z-direction)
+bf_zOffset 100e-6; //distance of biofilm from front of system so its not right up against the wall
+
 
 //// various d settings //////////
 // these are the blockMeshDict parameters used for a riblet system with a riblet spacing of 92 microns

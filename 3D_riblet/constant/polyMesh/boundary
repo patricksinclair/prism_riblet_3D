@@ -15,39 +15,44 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-5
+6
 (
     leftWall
     {
         type            patch;
-        nFaces          16;
-        startFace       3215;
+        nFaces          800;
+        startFace       100996;
     }
     rightWall
     {
         type            patch;
-        nFaces          16;
-        startFace       3231;
+        nFaces          800;
+        startFace       101796;
     }
     lowerWall
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          153;
-        startFace       3247;
+        nFaces          4000;
+        startFace       102596;
     }
     upperWall
     {
         type            patch;
-        nFaces          105;
-        startFace       3400;
+        nFaces          2200;
+        startFace       106596;
     }
-    defaultFaces
+    frontWall
     {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          3360;
-        startFace       3505;
+        type            patch;
+        nFaces          704;
+        startFace       108796;
+    }
+    backWall
+    {
+        type            patch;
+        nFaces          704;
+        startFace       109500;
     }
 )
 

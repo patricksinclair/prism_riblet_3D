@@ -51,6 +51,22 @@ boundaryField
         value           uniform 0;
     }
 
+    frontWall
+    {
+        type            inletOutlet;
+        inletValue      uniform 0;
+        value           uniform 0;
+    }
+
+    backWall
+    {
+        type            inletOutlet;
+        inletValue      uniform 0;
+        value           uniform 0;
+    }
+
+
+
     defaultFaces
     {
         type            empty;

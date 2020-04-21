@@ -26,15 +26,17 @@ boundaryField
     {
         // type fixedValue;
         // value uniform ($u_max 0 0);
-        type zeroGradient;
+        //type zeroGradient;
+        type slip;
     }
 
 
     rightWall
     {
-      type inletOutlet;
-      inletValue uniform (0 0 0);
-      value uniform (0 0 0);
+      // type inletOutlet;
+      // inletValue uniform (0 0 0);
+      // value uniform (0 0 0);
+      type slip;
     }
 
 
@@ -49,7 +51,19 @@ boundaryField
 
         //type slip;
         type fixedValue;
-        value uniform ($u_max $u_jet 0);
+        value uniform (0 0 $u_max);
+    }
+
+    frontWall
+    {
+      type zeroGradient;
+    }
+
+    backWall
+    {
+      type inletOutlet;
+      inletValue uniform (0 0 0);
+      value uniform (0 0 0);
     }
 
 

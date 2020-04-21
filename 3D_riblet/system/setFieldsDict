@@ -21,11 +21,13 @@ defaultFieldValues
     volScalarFieldValue alpha.biofilm 0
 );
 
+bf_backend #calc "$bf_zOffset+$bf_length";
+
 regions
 (
     boxToCell
     {
-        box (0 0 -1) ($bf_length $bf_thickness 1);
+        box (0 0 $bf_zOffset) ($bf_width $bf_thickness $bf_backend);
         fieldValues
         (
             volScalarFieldValue alpha.biofilm 1
