@@ -8,12 +8,12 @@
 # Choose a queue:
 # Check options with "qconf -sql"
 # Check details with "qconf -sq <q-name>"
-#$ -q cm.7.day
+#$ -q sopa.1.day
 
 # Choose a parallel environment:
 # Check options with "qconf -spl"
 # Check details with "qconf -sp <pe-name>"
-#$ -pe mpi 20       # asks for n processors for an mpi job
+#$ -pe mpi 32       # asks for n processors for an mpi job
 #$ -l h_vmem=4G     # asks for n Gb of memory
 # Send mail at submission and completion of script
 #$ -m be

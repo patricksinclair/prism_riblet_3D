@@ -42,17 +42,17 @@ surfaceY_nC $d_23_params.surfaceY_nC; //the no. of y-cells in the blocks on the 
 fluidY_nC $d_23_params.fluidY_nC; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
 
 
-systemZ_nC 50; //no. of z-cells throughout the system
+systemZ_nC 45; //no. of z-cells throughout the system
 z_grading 1; //z-cells grading throughout the system. uniform for now
 
-LBlockX_nC 4; //no. of x-cells in the LHS blocks
-RBlockX_nC 4; //no. of x-cells in the RHS blocks
+LBlockX_nC 5; //no. of x-cells in the LHS blocks
+RBlockX_nC 5; //no. of x-cells in the RHS blocks
 
-r_grading_x 2; //grading of the x-mesh on the RHS of the riblet
+r_grading_x 3; //grading of the x-mesh on the RHS of the riblet
 l_grading_x #calc "1./$r_grading_x";
 
-t_grading_y 6; //grading of the y-mesh on the bottom blocks (riblet surface)
-b_grading_y #calc "1./2.";
+t_grading_y 6; //grading of the y-mesh on the top blocks (fluid regime)
+b_grading_y #calc "1./2."; //grading of the y-mesh on the blocks in the riblet channels
 
 outlet_xGrading 2; //x-grading of the RHS x-cells
 inlet_xGrading #calc "1./$outlet_xGrading"; //x-grading of the inlet x-cells
