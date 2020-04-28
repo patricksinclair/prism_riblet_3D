@@ -34,8 +34,13 @@ level = 42 microns
 //////////////////////////////////////////////
 
 Due to the large clocktimes and high number of cores required to run these 3D simulations, it seems that the best course of action is to submit these jobs
-to the 24 hour queue and then manually continue them once the 24 hours has elapsed.  This appears reasonably straightforward to do.  The steps are as follows:
+to the 24 hour queue and then manually continue them once the 24 hours has elapsed.  This appears reasonably straightforward to do.
 
-1. Change the startFrom keyword in system/controlDict as startTime -> latestTime.  This can be done via: sed -i 's/startTime/latestTime/g' system/controlDict
+For script submission, submit the mpi_script_interFoam one, and then for any further required runs, run the job_continiuity_script.
+
+To continue a stopped openfoam job, the steps are as follows:
+
+1. Change the startFrom keyword in system/controlDict as startTime -> latestTime.  This can be done via: sed -i '0,/startTime/ s/startTime/latestTime/' system/controlDict
+(Fixed the error where both occurrences of startTime were being replaced, resulting in the simulation restarting from 0.)
 2. Just in case the job was stopped in the middle of filewriting, run this command to delete the latest time directories: foamListTimes -processor -latestTime -rm
 3. Then run the solver as usual.  No need to reconstructPar anything.
