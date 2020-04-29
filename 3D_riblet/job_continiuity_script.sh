@@ -32,7 +32,7 @@ source ~/Programs/OpenFOAM/OpenFOAM-v1906/etc/bashrc
 #and there is no need to decomposePar again.  Instead we instruct the system to start off where it last stopped.
 #in case the job was stopped mid file writing, we'll delete the latest time directories (and hope that doesn't cause any issues itself)
 
-sed -i '0,/startTime/ s/startTime/latestTime/' system/controlDict     #this is so openfoam starts from the latest time directory rather than from t=0. NOW ONLY CHANGES FIRST startTime OCCURRENCE.
+sed -i '/startFrom/c\startFrom       latestTime;' system/controlDict     #this is so openfoam starts from the latest time directory rather than from t=0. NOW ONLY CHANGES THE INTENDED KEYWORD.
 foamListTimes -processor -latestTime -rm                #openfoam command. deletes the latest time directories from the processor files
 
 # can be useful to know the name of the computer where the job is running
