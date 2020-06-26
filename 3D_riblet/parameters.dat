@@ -36,5 +36,5 @@ d_23_params{
     plateauX_nC 2; //the no. of x-cells in the blocks on/above the space between riblets
 
     surfaceY_nC 5; //the no. of y-cells in the blocks on the surface
-    fluidY_nC 9; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
+    fluidY_nC 6; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
 }

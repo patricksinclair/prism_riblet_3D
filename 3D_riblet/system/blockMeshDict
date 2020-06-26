@@ -35,6 +35,7 @@ convertToMeters 1e-6;
 // surfaceY_nC $d_46_params.surfaceY_nC; //the no. of y-cells in the blocks on the surface
 // fluidY_nC $d_46_params.fluidY_nC; //the n0. of y-cells in the blocks in the surrounding fluid (e.g. ocean)
 // //
+//CHANGE THESE BACK AFTER YOU'RE DONE FIDDLING
 ribletX_nC $d_23_params.ribletX_nC; //the no. of x-cells in the blocks on/above the riblets
 plateauX_nC $d_23_params.plateauX_nC; //the no. of x-cells in the blocks on/above the space between riblets
 

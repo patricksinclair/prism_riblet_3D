@@ -42,5 +42,9 @@ To continue a stopped openfoam job, the steps are as follows:
 
 1. Change the startFrom keyword in system/controlDict as startTime -> latestTime.  This can be done via: sed -i '/startFrom/c\startFrom       latestTime;' system/controlDict
 (Fixed the error where both occurrences of startTime were being replaced, resulting in the simulation restarting from 0.)
+NOW INSTEAD OF THIS JUST USE THE job_continiuity_script SCRIPT
 2. Just in case the job was stopped in the middle of filewriting, run this command to delete the latest time directories: foamListTimes -processor -latestTime -rm
 3. Then run the solver as usual.  No need to reconstructPar anything.
+////////////////////////////////////////////////////////////////////////
+
+Added drag coefficient stuff to the files.
