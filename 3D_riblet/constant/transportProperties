@@ -22,7 +22,7 @@ biofilm
 {
     //represents ketchup here
     transportModel  Newtonian;
-    nu              1e-3;
+    nu              1;
     rho             1000;
 }
 

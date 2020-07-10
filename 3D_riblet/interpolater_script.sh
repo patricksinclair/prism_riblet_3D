@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #MAKE SURE THAT STARTFROM IN THE CONTROLDICT IS SET TO LATEST TIME
-#ALSO MAKE SURE THAT THAT 0/alpha.biofilm IN THE SOURCE DIRECTORY HAS BEEN DELETED
 
-dynamicMeshFilePath='../../d_23_thickBF/3D_riblet/'
+dynamicMeshFilePath='../../d_92_thickBiofilm/quad_riblet/'
+#dynamicMeshTime0='../../d_92_thickBiofilm/quad_riblet/
 dynamicMeshTime0="$dynamicMeshFilePath/0"
 
 
@@ -13,7 +13,7 @@ foamListTimes -rm
 #rm 0/alpha.biofilm
 setFields
 
-for t in $(seq 0 0.2 15);
+for t in $(seq 0 0.1 30);
 do
 
   #this removes the .0 from certain values of t, so that t is consisten with OpenFOAM
