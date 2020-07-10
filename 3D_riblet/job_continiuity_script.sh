@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#$ -N d_23_thickBF_viscosity++ # job name
+#$ -N d_23_thickBF_viscosity-- # job name
 #$ -V           # use all shell environment variables
 #$ -cwd         # run job in working directory
 # #$ -j y         # merge stdout and stderr to one file

@@ -21,8 +21,9 @@ phases (biofilm fluid);
 biofilm
 {
     //represents ketchup here
+    //usual nu value is 1e-3
     transportModel  Newtonian;
-    nu              1;
+    nu              1e-6;
     rho             1000;
 }
 
