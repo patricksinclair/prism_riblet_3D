@@ -30,7 +30,7 @@ regions
         box (0 0 $bf_zOffset) ($bf_width $bf_thickness $bf_backend);
         fieldValues
         (
-            volScalarFieldValue alpha.biofilm 0
+            volScalarFieldValue alpha.biofilm 1
         );
     }
 );
