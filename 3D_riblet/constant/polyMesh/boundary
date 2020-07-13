@@ -20,39 +20,39 @@ FoamFile
     leftWall
     {
         type            patch;
-        nFaces          630;
-        startFace       82921;
+        nFaces          1350;
+        startFace       157650;
     }
     rightWall
     {
         type            patch;
-        nFaces          630;
-        startFace       83551;
+        nFaces          1350;
+        startFace       159000;
     }
     lowerWall
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          3420;
-        startFace       84181;
+        nFaces          1800;
+        startFace       160350;
     }
     upperWall
     {
         type            patch;
-        nFaces          2070;
-        startFace       87601;
+        nFaces          1800;
+        startFace       162150;
     }
     frontWall
     {
         type            patch;
-        nFaces          644;
-        startFace       89671;
+        nFaces          1200;
+        startFace       163950;
     }
     backWall
     {
         type            patch;
-        nFaces          644;
-        startFace       90315;
+        nFaces          1200;
+        startFace       165150;
     }
 )
 
